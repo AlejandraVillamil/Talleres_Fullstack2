@@ -26,21 +26,21 @@ btnPink.addEventListener('click', () => {
 
 
     let themeOnStorage = localStorage.getItem('SelectedTheme')
-    document.getElementById('container').classList.remove('dark')
-    document.getElementById('container').classList.remove('pink')
 
     if (themeOnStorage == "dark") {
-        console.log("rule Dark")
-        
-        let container = document.getElementById('container').classList.add('dark')
+        console.log("rule Dark")    
+        let container = document.getElementById('container')
+        container.className="container dark"
     
     }else if(themeOnStorage == "pink"){
         console.log("rule pink")
-        let container = document.getElementById('container').classList.add('pink')
+        let container = document.getElementById('container')
+        container.className="container pink"
         
     }else{
         console.log("rule white")
-        let container = document.getElementById('container').classList.add('white')
+        let container = document.getElementById('container')
+        container.className="container"
     }
 
 
